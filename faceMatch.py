@@ -14,3 +14,17 @@ def getWebcam():
     webcam.release()
     cv2.destroyAllWindows()
 
+def getFace(file):
+    rawFace = face_recognition.load_image_file(file)
+    return face_recognition.face_encodings(rawFace)[0]
+
+#me = getFace("myface.png")
+# notMe = getFace("notme.jpg")
+# identify = getFace("whoseface.JPG")
+# results = face_recognition.compare_faces([me,notMe], identify)
+# print(results)
+
+
+
+face_locations = face_recognition.face_locations(face_recognition.load_image_file("myface.png"))
+print(face_locations)
