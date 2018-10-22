@@ -1,5 +1,9 @@
 import face_recognition
+import numpy as np
 import cv2
+from PIL import Image
+from PIL import ImageDraw
+
 
 def getWebcam():
     webcam = cv2.VideoCapture(0)
@@ -38,9 +42,15 @@ def getCorners(fL):
     bR = (fL[1], fL[2])
     return tL, bR
 
-getWebcam()
+# getWebcam()
 
+face = face_recognition.load_image_file("notme.jpg")
+img = Image.fromarray(face)
+d = ImageDraw.Draw(img, 'RGBA')
+feats = face_recognition.face_landmarks(face_recognition.load_image_file("notme.jpg"))[0]
+d.polygon(feats['left_eye'], fill=(0, 0, 255, 255))
 
+img.show()
 
 
 
