@@ -7,7 +7,22 @@ def getWebcam():
     while True:
         ret, frame = webcam.read()
 
+        locations = face_recognition.face_locations(frame)
+
+        for spot in locations:
+            tL, bR = getCorners(spot)
+            cv2.rectangle(frame,tL,bR,(0,0,255),3)
+
+
+
+
+
         cv2.imshow('frame', frame)
+
+
+
+
+
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -18,14 +33,16 @@ def getFace(file):
     rawFace = face_recognition.load_image_file(file)
     return face_recognition.face_encodings(rawFace)[0]
 
+def getCorners(fL):
+    tL = (fL[3], fL[0])
+    bR = (fL[1], fL[2])
+    return tL, bR
 
-# getWebcam()
+getWebcam()
 
 
-face = cv2.imread("myface.png")
 
-cv2.imshow('image',img)
-cv2.imshow('title', face)
+
 
 
 
@@ -36,7 +53,7 @@ cv2.imshow('title', face)
 # print(results)
 
 
-#
+
 # # top, right, bottom, left
 # fL = face_recognition.face_locations(face_recognition.load_image_file("myface.png"))
 # print(fL[0][0])
@@ -44,6 +61,5 @@ cv2.imshow('title', face)
 # bR = (fL[0][1], fL[0][2])
 # cv2.rectangle(face,tL,bR, (0, 0, 255), 2)
 # cv2.imshow("yah",face)
-
-
+# cv2.waitKey(0)
 
