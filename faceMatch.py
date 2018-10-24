@@ -14,29 +14,30 @@ def getWebcam():
         lowFiFrame = copy.deepcopy(frame)
         lowFiFrame = cv2.resize(lowFiFrame, (0,0), fy=.25, fx=.25)
         locations = face_recognition.face_locations(lowFiFrame)
-
+        feats = face_recognition.face_landmarks(lowFiFrame)
         for spot in locations:
             tL, bR = getCorners(spot,4)
             cv2.rectangle(frame,tL,bR,(0,0,255),3)
+            # editFeat(frame, lowFiFrame, "left_eye", (0,255,255),4)
+            # editFeat(frame, lowFiFrame, "right_eye", (255,255,0),4)
+            # editFeat(frame, lowFiFrame, "right_eyebrow", (126,12,90),4)
+            editFeat(frame, lowFiFrame, feats, "left_eyebrow", (16,120,20),4)
+
+        if len(feats) > 1:
+            eyeList = []
+            for person in feats:
+                eyeList.append(person["chin"])
+            eyeRectList = []
+            for eye in eyeList:
+                eyeRectList.append(maxAndMin(eye))
+            print(eyeRectList)
+            # eyeSwap(frame, eyeRectList[0],eyeRectList[1])
             try:
-                feats = face_recognition.face_landmarks(lowFiFrame)
-                for person in feats:
-                    mark = person["left_eye"]
-                    mark = np.multiply(np.array(mark, np.int32).reshape((-1,1,2)),4)
-                    print(mark)
-                    cv2.polylines(frame, [mark],True,(0,255,0))
-                # # feats = np.array(feats,np.int32).reshape((-1,1,2))
-                # newFeats = []
-                # for tup in feats:
-                #     newFeats.append([tup[0], tup[1]])
-                # newFeats = np.multiply(
-                #     np.array(newFeats, np.int32).reshape((-1, 1, 2)), 4)
-                # cv2.polylines(frame, [newFeats], True, (0, 255, 0))
+                for i in range(eyeRectList[0][0]*4,eyeRectList[0][2]*4):
+                    for j in range(eyeRectList[0][1]*4, eyeRectList[0][3]*4):
+                        frame[j][i] = (0,0,0)
             except:
                 pass
-
-
-
         cv2.imshow('frame', frame)
 
 
@@ -48,6 +49,32 @@ def getWebcam():
 
     webcam.release()
     cv2.destroyAllWindows()
+
+def maxAndMin(eyeCoords):
+    listX = []
+    listY = []
+    for tup in eyeCoords:
+        listX.append(tup[0])
+        listY.append(tup[1])
+    return [min(listX),min(listY),max(listX),max(listY)]
+
+def eyeSwap(frame, eye1, eye2):
+    # Coords in the eyes go minx, miny, maxx, maxy
+    try:
+        for i in range(eye1[2]-eye1[0]):
+            for j in range(eye1[3] - eye1[1]):
+                frame[eye2[0]+i][eye2[1]+j] = frame[eye1[0]+i][eye1[1]+j]
+    except:
+        pass
+
+def editFeat(origPic, smallPic, feats, feature, color, borderSize):
+    try:
+        for person in feats:
+            mark = person[feature]
+            mark = np.multiply(np.array(mark, np.int32).reshape((-1, 1, 2)), 4)
+            cv2.polylines(origPic, [mark], True, color, borderSize)
+    except:
+        pass
 
 def getFace(file):
     rawFace = face_recognition.load_image_file(file)
