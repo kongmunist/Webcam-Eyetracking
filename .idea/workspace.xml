@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22323624-8de6-435e-8af5-35e99498ffc4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faceMatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceMatch.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,31 +15,33 @@
     <session id="1990946589">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="403" />
-          <entry key="py" value="4444" />
+          <entry key="Python Console" value="657" />
+          <entry key="py" value="5330" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4847" />
+          <entry key="Python" value="5987" />
         </counts>
       </usages-collector>
     </session>
@@ -48,15 +51,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/faceMatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state relative-caret-position="417">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <marker date="1540333999048" expanded="true" signature="132:133" ph="..." />
-                <marker date="1540333999048" expanded="true" signature="1839:1844" ph="..." />
-                <marker date="1540333999048" expanded="true" signature="1839:2088" ph="..." />
-                <marker date="1540333999048" expanded="true" signature="2155:2403" ph="..." />
-                <marker date="1540333999048" expanded="true" signature="2685:2973" ph="..." />
+                <marker date="1540503719713" expanded="true" signature="701:702" ph="..." />
+                <marker date="1540503719713" expanded="true" signature="769:888" ph="..." />
               </folding>
             </state>
           </provider>
@@ -82,10 +82,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
-    <option name="y" value="42" />
-    <option name="width" value="1169" />
-    <option name="height" value="837" />
+    <option name="x" value="81" />
+    <option name="y" value="43" />
+    <option name="width" value="1300" />
+    <option name="height" value="856" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -93,6 +93,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,11 +105,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -173,15 +173,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="131" y="42" width="1169" height="837" extended-state="0" />
-    <editor active="true" />
+    <frame x="81" y="43" width="1300" height="856" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22439405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32068062" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -189,7 +188,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32885906" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.32853404" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -201,15 +200,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/faceMatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        <state relative-caret-position="417">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <marker date="1540333999048" expanded="true" signature="132:133" ph="..." />
-            <marker date="1540333999048" expanded="true" signature="1839:1844" ph="..." />
-            <marker date="1540333999048" expanded="true" signature="1839:2088" ph="..." />
-            <marker date="1540333999048" expanded="true" signature="2155:2403" ph="..." />
-            <marker date="1540333999048" expanded="true" signature="2685:2973" ph="..." />
+            <marker date="1540503719713" expanded="true" signature="701:702" ph="..." />
+            <marker date="1540503719713" expanded="true" signature="769:888" ph="..." />
           </folding>
         </state>
       </provider>
