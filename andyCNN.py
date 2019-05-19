@@ -65,7 +65,8 @@ def dataLoad(path, want = 0):
 
     for name in nameList:
         im = cv.cvtColor(cv.imread(path + "/" + name), cv.COLOR_BGR2GRAY)
-        totalHolder.append((torch.tensor([[im]]).to(dtype=torch.float,device=device),
+        top = max([max(x) for x in im])
+        totalHolder.append(((torch.tensor([[im]]).to(dtype=torch.float,device=device))/top,
                             torch.tensor([[int((name.split("."))[want])/dims[want]]]).to(dtype=torch.float,device=device)))
 
     # print(totalHolder)
@@ -73,32 +74,32 @@ def dataLoad(path, want = 0):
 
 
 def evaluateModel(model,testSet, sidelen = 1440):
-    model.eval().cuda()
+    model.eval()
     err = 0
     for (im, label) in testSet:
         output = model(im)
         err += abs(output.item() - label.item())
-    model.train().cuda()
+    model.train()
 
     return (err/len(testSet)*sidelen)
 
 def getError(model,testSet):
-    model.eval().cuda()
+    model.eval()
     foeList = []
     for (im,label) in testSet:
         output = model(im)
         foeList.append(abs(output.item() - label.item()))
-    model.train().cuda()
+    model.train()
     return foeList
 
 
 num_epochs = 2
 
 model = ConvNet().to(device)
-model.cuda()
+# model.cuda()
 
 criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 
 trainingSet = dataLoad("eyes")
@@ -116,9 +117,10 @@ bestScore = 10000
 testscores = []
 trainscores = []
 
-model.train().cuda()
+model.train()
 for epoch in range(num_epochs):
     print(epoch)
+    np.random.shuffle(trainingSet)
 
     for i,(im, label) in enumerate(trainingSet):
 
@@ -127,8 +129,8 @@ for epoch in range(num_epochs):
 
 
         output = model(im)
-        if label.item()<.2:
-            print(i, output, label)
+        # if label.item()<.2:
+        #     print(i, output, label)
         loss = criterion(output, label)
 
         optimizer.zero_grad()
