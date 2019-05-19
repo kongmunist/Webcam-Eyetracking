@@ -54,6 +54,8 @@ class ConvNet(torch.nn.Module):
 
 def dataLoad(path, want = 0):
     nameList = os.listdir(path)
+    print(nameList)
+    print(len(nameList))
     # pics = []
     # labels = []
     totalHolder = []
@@ -67,7 +69,7 @@ def dataLoad(path, want = 0):
         totalHolder.append((torch.tensor([[im]]).to(dtype=torch.float),
                             torch.tensor([[int((name.split("."))[want])/dims[want]]])))
 
-    print(totalHolder)
+    # print(totalHolder)
     return totalHolder
 
 
@@ -89,6 +91,8 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.0011)
 
 trainingSet = dataLoad("eyes")
 test = dataLoad("testeyes")
+
+
 bestModel = model
 bestScore = 10000
 testscores = []
@@ -124,7 +128,8 @@ for epoch in range(num_epochs):
 finalScore = evaluateModel(bestModel,test)
 print(finalScore)
 
-torch.save(bestModel.state_dict(), "xModels/" + str(int(finalScore))+".plt")
+if finalScore < 100:
+    torch.save(bestModel.state_dict(), "xModels/" + str(int(finalScore))+".plt")
 
 plt.title(str(int(finalScore)))
 plt.plot(testscores)
