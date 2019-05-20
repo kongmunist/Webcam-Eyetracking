@@ -11,7 +11,8 @@ import torch.functional as F
 import matplotlib.pyplot as plt
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
+# torch.backends.cudnn.deterministic = True
+# torch.backends.cudnn.benchmark = False
 
 # class noPool(torch.nn.Module):
 #     def __init__(self):
@@ -54,50 +55,78 @@ class ConvNet(torch.nn.Module):
 
 def dataLoad(path, want = 0):
     nameList = os.listdir(path)
-    # pics = []
-    # labels = []
+    try:
+        nameList.remove(".DS_Store")
+    except:
+        pass
     totalHolder = []
     dims = [1440,900]
 
     for name in nameList:
-        if "DS_Store" in name:
-            continue
-        # print(name)
         im = cv.cvtColor(cv.imread(path + "/" + name), cv.COLOR_BGR2GRAY)
-        totalHolder.append((torch.tensor([[im]]).to(dtype=torch.float),
-                            torch.tensor([[int((name.split("."))[want])/dims[want]]])))
+        totalHolder.append((torch.tensor([[im]]).to(dtype=torch.float,device=device),
+                            torch.tensor([[int((name.split("."))[want])/dims[want]]]).to(dtype=torch.float,device=device)))
 
-    print(totalHolder)
+    # print(totalHolder)
     return totalHolder
 
 
 def evaluateModel(model,testSet, sidelen = 1440):
-    model.eval()
+    model.eval().cuda()
     err = 0
     for (im, label) in testSet:
         output = model(im)
         err += abs(output.item() - label.item())
+    model.train().cuda()
+
     return (err/len(testSet)*sidelen)
 
+def getError(model,testSet):
+    model.eval().cuda()
+    foeList = []
+    for (im,label) in testSet:
+        output = model(im)
+        foeList.append(abs(output.item() - label.item()))
+    model.train().cuda()
+    return foeList
 
-num_epochs = 7
+
+num_epochs = 2
 
 model = ConvNet().to(device)
+model.cuda()
+
 criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.0011)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
 
 
 trainingSet = dataLoad("eyes")
 test = dataLoad("testeyes")
+# trainingSet = [(x.to(device),y.to(device)) for (x,y) in trainingSet]
+# test = [(x.to(device),y.to(device)) for (x,y) in test]
+
+# print(trainingSet[-1])
+# print(test[-1])
+
+
 bestModel = model
 bestScore = 10000
 testscores = []
 trainscores = []
 
+model.train().cuda()
 for epoch in range(num_epochs):
+    print(epoch)
+
     for i,(im, label) in enumerate(trainingSet):
-        model.train()
+
+        # print(im.device)
+        # print(label.device)
+
+
         output = model(im)
+        if label.item()<.2:
+            print(i, output, label)
         loss = criterion(output, label)
 
         optimizer.zero_grad()
@@ -121,10 +150,11 @@ for epoch in range(num_epochs):
                    .format(epoch+1, num_epochs, i+1, len(trainingSet), loss.item()))
 
 
+
 finalScore = evaluateModel(bestModel,test)
 print(finalScore)
-
-torch.save(bestModel.state_dict(), "xModels/" + str(int(finalScore))+".plt")
+if finalScore <100:
+    torch.save(bestModel.state_dict(), "xModels/" + str(int(finalScore))+".plt")
 
 plt.title(str(int(finalScore)))
 plt.plot(testscores)
