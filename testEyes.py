@@ -8,8 +8,8 @@ import torch.nn as nn
 import torchvision
 import torch.functional as F
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
+# device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+device  = 'cpu'
 
 class eightdeep(torch.nn.Module):
     def __init__(self):
@@ -212,6 +212,9 @@ class ConvNet(torch.nn.Module):
 
         return x
 
+
+
+
 def maxAndMin(featCoords,mult = 1):
     adj = 10/mult
     listX = []
@@ -316,17 +319,17 @@ def evaluateModel(model,testSet, sidelen = 1440):
 # sn.eval()
 
 sixn = sixnine().to(device)
-sixn.load_state_dict(torch.load("xModels/69good.plt"))
+sixn.load_state_dict(torch.load("xModels/69good.plt",map_location=device))
 sixn.eval()
 
 sevent = venty().to(device)
-sevent.load_state_dict(torch.load("xModels/70test.plt"))
+sevent.load_state_dict(torch.load("xModels/70test.plt",map_location=device))
 sevent.eval()
 
 
 # Y classifiers
 fiv = eightdeep().to(device)
-fiv.load_state_dict(torch.load("yModels/54x1.plt"))
+fiv.load_state_dict(torch.load("yModels/54x1.plt",map_location=device))
 fiv.eval()
 
 # sone = fourdeep().to(device)
@@ -339,7 +342,7 @@ fiv.eval()
 
 testy = dataLoad("testeyes",want=1)
 testx = dataLoad("testeyes")
-print(evaluateModel(sixn, test))
+print(evaluateModel(sixn, testx))
 
 trainx = dataLoad("eyes")
 trainy = dataLoad("eyes",want=1)

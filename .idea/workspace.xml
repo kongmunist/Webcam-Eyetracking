@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22323624-8de6-435e-8af5-35e99498ffc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testEyes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MLtracking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classifierCorrection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/andyCNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/andyCNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3Asian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jim.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myface.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notme.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testEyes.py" beforeDir="false" afterPath="$PROJECT_DIR$/testEyes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoseface.JPG" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,40 +55,49 @@
     <session id="1290446198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="py" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="8" />
+          <entry key="Python" value="15" />
+          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="489" />
+          <entry key="MLtracking" value="48" />
+          <entry key="Python Console" value="896" />
           <entry key="andyCNN" value="1131" />
+          <entry key="classifierCorrection" value="539" />
           <entry key="dummy" value="5" />
           <entry key="eyetrack" value="5" />
-          <entry key="py" value="8410" />
+          <entry key="py" value="13070" />
+          <entry key="scratch" value="189" />
+          <entry key="testEyes" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="10035" />
+          <entry key="Python" value="14450" />
+          <entry key="Scratch" value="1451" />
         </counts>
       </usages-collector>
     </session>
@@ -92,26 +107,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eyetrack.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="152" selection-start-line="152" selection-end-line="152" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-                <marker date="1558132103271" expanded="true" signature="1662:1664" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testEyes.py">
+        <entry file="file://$PROJECT_DIR$/MLtracking.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+            <state relative-caret-position="249">
+              <caret line="139" column="37" lean-forward="true" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#297#887#0" />
+                <element signature="e#923#1509#0" />
+                <element signature="e#1547#2456#0" />
+                <marker date="1560642287096" expanded="true" signature="2959:3335" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,8 +126,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/andyCNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="1030">
+              <caret line="160" column="31" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classifierCorrection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="174" column="30" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1560638874319" expanded="true" signature="1930:1931" ph="..." />
+                <marker date="1560638874319" expanded="true" signature="4539:4799" ph="..." />
+                <marker date="1560638874319" expanded="true" signature="5075:5076" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,6 +166,7 @@
       <find>maxandMin</find>
       <find>maxand</find>
       <find>print</find>
+      <find>eval</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,15 +180,17 @@
         <option value="$PROJECT_DIR$/addme.py" />
         <option value="$PROJECT_DIR$/eyetrack.py" />
         <option value="$PROJECT_DIR$/andyCNN.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/testEyes.py" />
+        <option value="$PROJECT_DIR$/classifierCorrection.py" />
+        <option value="$PROJECT_DIR$/MLtracking.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="187" />
-    <option name="y" value="70" />
-    <option name="width" value="1123" />
-    <option name="height" value="685" />
+    <option name="y" value="23" />
+    <option name="width" value="1353" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -171,7 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,13 +205,24 @@
               <item name="EmojiMatch" type="b2602c69:ProjectViewProjectNode" />
               <item name="EmojiMatch" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="EmojiMatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="EmojiMatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/andykong/Library/Mobile Documents/com~apple~CloudDocs/programming/PycharmProjects/EmojiMatch/MLtracking.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -201,22 +238,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testEyes">
-    <configuration name="addme" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.MLtracking">
+    <configuration name="MLtracking" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EmojiMatch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/addme.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MLtracking.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -227,6 +261,9 @@
       <module name="EmojiMatch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -241,10 +278,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="classifierCorrection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EmojiMatch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classifierCorrection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="eyetrack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EmojiMatch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -259,21 +317,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="faceMatch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EmojiMatch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/EmojiMatch/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/faceMatch.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -300,17 +355,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.testEyes" />
-      <item itemvalue="Python.faceMatch" />
-      <item itemvalue="Python.addme" />
       <item itemvalue="Python.eyetrack" />
       <item itemvalue="Python.andyCNN" />
+      <item itemvalue="Python.MLtracking" />
+      <item itemvalue="Python.classifierCorrection" />
+      <item itemvalue="Python.scratch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MLtracking" />
+        <item itemvalue="Python.classifierCorrection" />
+        <item itemvalue="Python.scratch" />
         <item itemvalue="Python.andyCNN" />
         <item itemvalue="Python.eyetrack" />
-        <item itemvalue="Python.addme" />
-        <item itemvalue="Python.faceMatch" />
       </list>
     </recent_temporary>
   </component>
@@ -337,23 +394,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="187" y="70" width="1123" height="685" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1353" height="867" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24591652" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20345345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.14790288" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31722054" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39728096" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31612903" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39612904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32258064" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32258064" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.35919055" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.2683871" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -382,13 +438,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../../Caches/PyCharmCE2018.2/python_stubs/1608936930/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -414,25 +463,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-908">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testEyes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="321" column="72" selection-start-line="321" selection-start-column="72" selection-end-line="321" selection-end-column="72" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <marker date="1540503719713" expanded="true" signature="701:702" ph="..." />
-            <marker date="1540503719713" expanded="true" signature="769:888" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/andyCNN.py">
+    <entry file="file://$PROJECT_DIR$/addme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state relative-caret-position="-1493">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eyetrack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        <state relative-caret-position="2790">
+          <caret line="186" column="37" selection-start-line="186" selection-start-column="37" selection-end-line="186" selection-end-column="37" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
             <marker date="1558132103271" expanded="true" signature="1662:1664" ph="..." />
@@ -440,12 +501,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testEyes.py">
+    <entry file="file://$PROJECT_DIR$/classifierCorrection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="169">
+          <caret line="174" column="30" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1560638874319" expanded="true" signature="1930:1931" ph="..." />
+            <marker date="1560638874319" expanded="true" signature="4539:4799" ph="..." />
+            <marker date="1560638874319" expanded="true" signature="5075:5076" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/andyCNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1030">
+          <caret line="160" column="31" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MLtracking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="139" column="37" lean-forward="true" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#297#887#0" />
+            <element signature="e#923#1509#0" />
+            <element signature="e#1547#2456#0" />
+            <marker date="1560642287096" expanded="true" signature="2959:3335" ph="..." />
           </folding>
         </state>
       </provider>
