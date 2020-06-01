@@ -1,4 +1,4 @@
-# EmojiMatch
+# Webcam-Eyetracking
 
 Originally a repo for doing facial recognition and matching an emoji to it, I've since hijacked it to hold my models and data collection and raw data for my eye tracking mouse. I use hough circles to perform pupil detection, and use a CNN on a bunch of data I collected. 
 
